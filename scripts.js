@@ -5,7 +5,7 @@ const Modal = {
             .classList
             .add('active') // toogle - TODO
     },
-    
+
     close() {
         document
             .querySelector('.modal-overlay')
@@ -110,10 +110,12 @@ const DOM = {
 
 const Utils = {
     formatAmount(value){
-        //value = Number(value) * 100
-        value = Number(value.replace(/\,\./g, "")) * 100
-        console.log(value)
-        return value
+        value = Number(value) * 100
+        
+        // console.log(value)
+        // console.log(Number(value.replace(/\,\./g, "")) * 100)
+        // value = Number(value.replace(/\,\./g, "")) * 100
+        return Math.round(value)
         
     },
     formatDate(date) {
